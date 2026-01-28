@@ -17,11 +17,20 @@
       </p>
     </div>
     <section>
-        <div class="7Days">
+        <div class="free7Days">
           <h3><span>Try it free 7 days</span> then $20/mo. thereafter</h3>  
         </div>
-    <form action=""> 
-        <input type="name" id="name" placeholder="Jonathan">
+    <form > 
+        <input type="name" id="name" placeholder="Jonathan" >
+        <p class="hidden">First Name cannot be empty</p>
+        <input type="lastName" id="lastName" placeholder="Last Name" >
+        <p class="hidden">Last Name cannot be empty</p>
+        <input type="email" id="email" placeholder="Email Address">
+        <p class="hidden">Looks like this is not an email</p>
+        <input type="password" id="password" placeholder="Password">
+        <p class="hidden">Password cannot be empty</p>
+        <button id="submit">CLAIM YOUR FREE TRIAL</button>
+        <h4>By clicking the button, you are agreeing to our <span>Terms and Services</span></h4>
     </form>
 </section>
   </body>

@@ -33,7 +33,7 @@ body {
     line-height: 55px; /* 110% */
     letter-spacing: -0.521px;
   }
-  p {
+  h4 {
     color: #fff;
     font-family: Poppins;
     font-size: 16px;
@@ -70,7 +70,7 @@ body {
   }
 }
 section {
-  /* width: 540px; */
+  width: 560px;
 }
 form {
   padding: 20px 40px 40px 40px;
@@ -99,7 +99,8 @@ form {
     
   }
   button {
-    margin: 20px 0 8px 0;
+    width: 100%;
+    margin: 29px 0 8px 0;
     border-radius: 5px;
     background: #38cc8b;
     box-shadow: 0 -4px 0 0 rgba(0, 0, 0, 0.09) inset;

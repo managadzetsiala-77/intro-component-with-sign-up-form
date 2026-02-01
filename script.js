@@ -1,30 +1,39 @@
 const form = document.querySelector("form");
-let userName = document.querySelector("#name");
-let userLastName = document.querySelector("#lastName");
-let userEmail = document.querySelector("#email");
-let userPassword = document.querySelector("#password");
-// let inputP = document.querySelector("p");
-// let inputBord = document.querySelector("input");
-console.log(inputBord);
+const userName = document.querySelector("#name");
+const userLastName = document.querySelector("#lastName");
+const userEmail = document.querySelector("#email");
+const userPassword = document.querySelector("#password");
+const inputP = document.querySelectorAll("p");
+const inputBord = document.querySelectorAll("input");
+
+
+console.log(inputP);
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
-  let user = userName.value;
-  let lastName = userLastName.value;
-  let result = validateForm(user, lastName);
+  // let user = userName.value;
+  // let lastName = userLastName.value;
+  let result = validateForm();
   if (result) {
-    console.log(user);
-    console.log(lastName);
+    console.log(userName.value);
+    console.log(userLastName.value);
+    console.log(userEmail.value);
+    console.log(userPassword.value);
 
     form.reset();
   }
 });
-function validateForm(user, lastName) {
+function validateForm() {
   let valid = true;
-  if (user === "" || lastName === "" ) {
-    userName.classList.add("error");
-    lastName.classList.add("error")
-    valid = false;
-  } else userName.classList.remove("error");
+  inputBord.forEach((item, index) => {
+    if (item.value.trim() === "") {
+      item.classList.add("error");
+      inputP[index].classList.remove("hidden");
+      valid = false;
+    } else {
+      item.classList.remove("error");
+      inputP[index].classList.add("hidden");
+    }
+  });
   return valid;
 }
